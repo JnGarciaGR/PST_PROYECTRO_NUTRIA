@@ -1,0 +1,360 @@
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+}
+
+.dashboard-header h1 {
+display: flex;
+align-items: center; /* Alinea verticalmente el logo y el texto */
+color: #2e8b57;
+}
+
+.dashboard-logo {
+height: 60px;
+margin-right: 15px; 
+}
+
+.dashboard-title {
+margin: 0; 
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  margin-right: 20px;
+  font-weight: bold;
+  color: #555;
+}
+
+.logout-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #ddd;
+}
+
+
+.bento-title {
+  color: #2e8b57;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+.progress-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.progress-text p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.meals-box table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+/* Nuevos estilos para el grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas para los cuadros superiores */
+  grid-auto-rows: minmax(180px, auto); /* Altura mínima de las cajas */
+  gap: 20px;
+}
+
+.inner-bento-item {
+  /* Vuelve a aplicar los estilos de un cuadro bento para el interior */
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra más sutil */
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-grow: 1; /* Para que cada cuadro ocupe el espacio disponible */
+}
+
+.inner-bento-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Animación hover para todos los cuadros bento */
+.bento-item {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bento-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilos de la dieta seleccionada */
+.selected-dieta-box {
+  grid-column: 2 / 3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dieta-icon {
+  width: 260px;
+  height: 230px;
+  margin: 12px;
+}
+
+.selected-dieta-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2e8b57;
+}
+
+/* Contenedor del progreso y el botón de período */
+.progress-and-goals-box {
+  grid-column: 3 / 3;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.period-toggle-btn {
+  background-color: #fffacd;
+  color: #2e8b57;
+  border: 1px solid #ffcc00;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.progress-content {
+  display: flex; /* Mantén flex para la distribución */
+  flex-direction: column; /* Esto hará que los elementos se apilen verticalmente */
+  gap: 20px;
+}
+
+.circle-progress-container {
+  /* Quita el flex-grow */
+  /* flex-grow: 1; */
+  text-align: center;
+}
+
+.macro-bars-container {
+  /* Quita el flex-grow */
+  /* flex-grow: 1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.circle-progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.circle-progress-container p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Estilos de las nuevas barras de progreso */
+.macro-bars-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.progress-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.progress-label-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-icon-container {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #e6f7e6;
+  padding: 3px;
+}
+
+.progress-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.progress-label {
+  margin: 0;
+  font-weight: bold;
+  color: #555;
+  flex-grow: 1;
+}
+
+.progress-value {
+  margin: 0;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.bar-background {
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: #90ee90; /* Verde saludable */
+  transition: width 0.5s ease-in-out;
+}
+
+.recommended-meals-box table,
+.meals-box {
+  grid-column: 2 / 4; /* Ocupa la última columna */
+  /* Si el estilo de la tabla es el mismo, no necesitas más cambios */
+}
+
+.recommended-meals-box th,
+.recommended-meals-box td,
+.meals-box th,
+.meals-box td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.recommended-meals-box th:last-child,
+.recommended-meals-box td:last-child {
+  text-align: center; /* Alinea el costo a la derecha para separarlo del nombre */
+}
+
+.recommended-meals-box th,
+.meals-box th {
+  background-color: #90ee90;
+  color: #2e8b57;
+}
+
+.recommended-meals-box td {
+  font-weight: 500;
+}
+
+.user-project-container {
+  display: flex;
+  flex-direction: column; /* Divide el contenido en filas */
+  gap: 28px; /* Espacio entre los cuadros de Datos del Usuario y Proyecto */
+  background-color: #ffffff00;
+  border: #ffffff00;
+  /* Asegúrate de que ocupe la primera columna del grid principal */
+  grid-column: 1 / 2;
+  margin: -22px;
+}
+
+/* Estilos para la ventana flotante (Modal) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  color: #333;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  animation: modal-fade-in 0.3s ease-in-out;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.modal-title {
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Animación */
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
