@@ -90,7 +90,6 @@ FIREBASE_CREDENTIALS_PATH=serviceAccountKey.json
 LOG_LEVEL=INFO
 ```
 
-**Importante**: El archivo `.env` ya está en `.gitignore`, así que no se subirá a Git.
 
 ### Paso 3: Configurar Firebase
 
@@ -154,24 +153,6 @@ El dashboard se abrirá en http://localhost:3000
 
 ---
 
-## 📚 Uso
-
-## Testing (pruebas)
-
-Si quieres correr los tests unitarios (requiere pytest instalado):
-
-```bash
-pytest tests/ -v
-```
-
-La estructura de tests está organizada así:
-
-```
-tests/
-├── test_validators.py      Pruebas de validación de datos
-├── test_models.py          Pruebas de los modelos de usuario
-└── test_firebase.py        Pruebas de operaciones con Firebase
-```
 
 ## Estructura del proyecto
 
@@ -188,26 +169,13 @@ PROYBOT/
 │
 ├── .env                     Variables de entorno (no subir a Git)
 ├── config.py                Configuración del proyecto
-├── config.example.py        Plantilla sin credenciales
 ├── requirements.txt         Lista de paquetes a instalar
 ├── .gitignore               Archivos que Git ignora
 ├── README.md                Este archivo
 │
-├── docs/                    Documentación adicional
 └── dashboard/               Dashboard React (frontend)
     └── NutrIA-Dashboard/
 ```
-
-## Seguridad
-
-Los archivos que nunca debes subir a Git (ya están protegidos en `.gitignore`):
-
-- `.env` - Tokens y claves de API
-- `serviceAccountKey.json` - Credenciales de Firebase
-- `config.py` - Configuración sensible
-
-Si clonas el proyecto, necesitarás crear estos archivos con tus propias credenciales.
-
 ## Tecnologías principales
 
 **Backend:**
@@ -215,14 +183,6 @@ Si clonas el proyecto, necesitarás crear estos archivos con tus propias credenc
 
 **Frontend:**
 - React 18, Firebase, CSS personalizado
-
-## Posibles mejoras
-
-- Gráficos más detallados de progreso
-- App móvil nativa
-- Integración con apps de salud
-- Análisis de nutrientes por foto
-- Sistema de recetas compartidas entre usuarios
 
 ## Autores
 
